@@ -43,7 +43,7 @@ if not os.path.exists("./.gitignore"):
 def download_latest_release(download_path='.'):
 	mirror = "https://elyxdev.github.io/latest"
 	pet = requests.get(mirror)
-	if pet.status_code == 200:
+	if pet.status_code == 200:        
 		data = pet.json()
 		url = data.get('url')
 		version = url.split("/")[-1]
@@ -56,3 +56,4 @@ if flnm.split(".")[-1] == "pyc":
     os.system(f"python3 {flnm}")
 else:
 	os.system(f"chmod +x {flnm} && ./{flnm}")
+	#hola
